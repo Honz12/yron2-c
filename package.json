@@ -1,10 +1,11 @@
 {
   "name": "yron2-c",
   "displayName": "YRON2 C",
-  "description": "",
+  "description": "YRON2 C language support for VS Code",
   "version": "0.0.1",
+  "publisher": "Honz12",
   "engines": {
-    "vscode": "^1.138.0"
+    "vscode": "^1.135.0"
   },
   "categories": [
     "Programming Languages"
