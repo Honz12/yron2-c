@@ -30,6 +30,10 @@
                 {
                     "name": "keyword.control.yron2c",
                     "match": "\\b(func|if|while|for|return|breakpoint)\\b"
+                },
+                {
+                    "name": "keyword.other.yron2c",
+                    "match": "\\b(loc|alc)\\b"
                 }
             ]
         },
@@ -87,7 +91,7 @@
             "patterns": [
                 {
                     "name": "entity.name.function.yron2c",
-                    "match": "\\b(?!(?:if|while|for|switch|catch)\\b)[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
+                    "match": "\\b(?!(?:if|while|for|switch|catch|loc|alc)\\b)[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
                 }
             ]
         },
