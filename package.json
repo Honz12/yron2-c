@@ -1,0 +1,25 @@
+{
+  "name": "yron2-c",
+  "displayName": "YRON2 C",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.138.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "yron2c",
+      "aliases": ["YRON2 C", "yron2c"],
+      "extensions": [".yc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "yron2c",
+      "scopeName": "source.yron2c",
+      "path": "./syntaxes/yron2c.tmLanguage.json"
+    }]
+  }
+}

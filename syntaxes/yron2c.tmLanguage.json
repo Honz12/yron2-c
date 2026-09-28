@@ -1,0 +1,116 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "YRON2 C",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#characters"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#typed-identifiers"
+        },
+        {
+            "include": "#function-calls"
+        },
+        {
+            "include": "#ints"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.yron2c",
+                    "match": "\\b(func|if|while|for|return|breakpoint)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.yron2c",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.yron2c",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.block.yron2c",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                },
+                {
+                    "name": "comment.line.double-slash.yron2c",
+                    "match": "//.*$"
+                }
+            ]
+        },
+        "characters": {
+            "name": "string.quoted.single.yron2c",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.yron2c",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "typed-identifiers": {
+            "patterns": [
+                {
+                    "match": "\\b(u8|u16|u32|i8|i16|i32)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.yron2c"
+                        },
+                        "2": {
+                            "name": "variable.other.yron2c"
+                        }
+                    }
+                }
+            ]
+        },
+        "function-calls": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.yron2c",
+                    "match": "\\b(?!(?:if|while|for|switch|catch)\\b)[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
+                }
+            ]
+        },
+        "ints": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.integer.yron2c",
+                    "match": "\\b\\d+\\b"
+                },
+                {
+                    "name": "constant.numeric.hex.yron2c",
+                    "match": "\\b0[xX][0-9A-Fa-f]+\\b"
+                },
+                {
+                    "name": "constant.numeric.binary.yron2c",
+                    "match": "\\b0[bB][01]+\\b"
+                },
+                {
+                    "name": "constant.numeric.octal.yron2c",
+                    "match": "\\b0[oO][0-7]+\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.yron2c"
+}
