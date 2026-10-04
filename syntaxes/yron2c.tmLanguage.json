@@ -29,11 +29,11 @@
             "patterns": [
                 {
                     "name": "keyword.control.yron2c",
-                    "match": "\\b(func|if|while|for|return|breakpoint)\\b"
+                    "match": "\\b(func|if|else|while|for|return|breakpoint)\\b"
                 },
                 {
                     "name": "keyword.other.yron2c",
-                    "match": "\\b(loc|alc)\\b"
+                    "match": "\\b(loc|alc|def)\\b"
                 }
             ]
         },
